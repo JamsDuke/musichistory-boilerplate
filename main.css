@@ -1,0 +1,43 @@
+.topNav {
+  border: 3px solid black;
+  margin-bottom: 10px;
+  background-color: #FFB4B0;
+}
+
+.topNav li {
+  text-decoration: none;
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+form {
+  border: 3px solid black;
+  margin: auto;
+  width: 30%;
+  height: 400px;
+  background-color: #4DD7FA;
+  float: left;
+}
+
+fieldset {
+  border: none;
+}
+
+.songInfo {
+  float: right;
+  border: 3px solid black;
+  margin: auto;
+  width: 68%;
+  height: 400px;
+  background-color: #FEFAC0;
+}
+
+.songInfo li {
+  text-decoration: none;
+  display: inline-block;
+  padding: 0 10px;
+}
+
+h2 {
+  color: #785616;
+}

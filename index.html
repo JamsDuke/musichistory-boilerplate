@@ -4,10 +4,92 @@
 <head>
   <meta charset="utf-8">
   <title>Music History</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
 </head>
 
 <body>
-
-
+  <div>
+    <ul class="topNav">
+      <li><a href="#">View Music</a></li>
+      <li><a href="#">Add Music</a></li>
+      <li><a href="#">Profile</a></li>
+    </ul>
+    <form>
+      <label class="hidden" for="songLength">Song Length</label>
+        <div>
+          <input type="range" min="0" max="100" value="50"/>
+        </div>
+      <fieldset>
+      <label for="artist">Artist:</label>
+        <div>
+          <select id="artist" name="artist">
+            <optgroup label="">
+              <option value="options">Options</option>
+            </optgroup>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset>
+      <label for="album">Album:</label>
+        <div>
+          <select id="album" name="album">
+            <optgroup label="">
+              <option value="options">Options</option>
+            </optgroup>
+          </select>
+        </div>
+      </fieldset>
+      <fieldset class="conditions">
+      <label>Genre: </label>
+        <div>
+          <label for="rock">Rock</label>
+          <input type="checkbox" value="rock" id="rock" name="rock">
+          <label for="classical">Classical</label>
+          <input type="checkbox" value="classical" id="classical" name="classical">
+        </div>
+        <div>
+          <label for="pop">Pop</label>
+          <input type="checkbox" value="pop" id="pop" name="pop">
+          <label for="jazz">Jazz</label>
+          <input type="checkbox" value="jazz" id="jazz" name="jazz">
+        </div>
+        <div>
+          <label for="blues">Blues</label>
+          <input type="checkbox" value="blues" id="blues" name="blues">
+          <label for="hipHop">Hip hop</label>
+          <input type="checkbox" value="hipHop" id="hipHop" name="hipHop">
+        </div>
+        <div>
+          <button type="submit">Filter</button>
+        </div>
+    </fieldset>
+    </form>
+    <section class="songInfo">
+      <ul>
+        <h2>Song Name</h2>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <ul>
+        <h2>Song Name</h2>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <ul>
+        <h2>Song Name</h2>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+      <ul>
+        <h2>Song Name</h2>
+        <li>Artist Name</li>
+        <li>Album Name</li>
+        <li>Genre</li>
+      </ul>
+    </section>
+  </div>
 </body>
 </html>
