@@ -14,7 +14,7 @@
       <li><a href="#">Add Music</a></li>
       <li><a href="#">Profile</a></li>
     </ul>
-    <form>
+    <form class="musicSelector">
       <label class="hidden" for="songLength">Song Length</label>
         <div>
           <input type="range" min="0" max="100" value="50"/>
@@ -23,8 +23,13 @@
       <label for="artist">Artist:</label>
         <div>
           <select id="artist" name="artist">
-            <optgroup label="">
-              <option value="options">Options</option>
+            <optgroup label="Artist">
+              <option value="options" selected=""></option>
+              <option value="options">Dragonforce</option>
+              <option value="options">ManOWar</option>
+              <option value="options">The Eels</option>
+              <option value="options">Ninja Sex Party</option>
+              <option value="options">Starbomb</option>
             </optgroup>
           </select>
         </div>
@@ -33,61 +38,64 @@
       <label for="album">Album:</label>
         <div>
           <select id="album" name="album">
-            <optgroup label="">
-              <option value="options">Options</option>
+            <optgroup label="Album">
+              <option value="options" selected=""></option>
+              <option value="options">Inhuman Rampage</option>
+              <option value="options">Brothers of Metal</option>
+              <option value="options">Souljacker</option>
+              <option value="options">Under the Covers</option>
+              <option value="options">Player Select</option>
             </optgroup>
           </select>
         </div>
       </fieldset>
-      <fieldset class="conditions">
-      <label>Genre: </label>
-        <div>
-          <label for="rock">Rock</label>
-          <input type="checkbox" value="rock" id="rock" name="rock">
-          <label for="classical">Classical</label>
-          <input type="checkbox" value="classical" id="classical" name="classical">
+    <fieldset>
+      <label>Genre:</label>
+      <div>
+        <div id="leftBox">
+          <ul class="genreCheck">
+            <li><input type="checkbox" value="rock" id="rock" name="rock"><label for="rock">Rock</label></li>
+            <li><input type="checkbox" value="pop" id="pop" name="pop"><label for="pop">Pop</label></li>
+            <li><input type="checkbox" value="blues" id="blues" name="blues"><label for="blues">Blues</label></li>
+          </ul>
         </div>
-        <div>
-          <label for="pop">Pop</label>
-          <input type="checkbox" value="pop" id="pop" name="pop">
-          <label for="jazz">Jazz</label>
-          <input type="checkbox" value="jazz" id="jazz" name="jazz">
+        <div id="rightBox">
+          <ul class="genreCheck">
+            <li><input type="checkbox" value="classical" id="classical" name="classical"><label for="classical">Classical</label></li>
+            <li><input type="checkbox" value="jazz" id="jazz" name="jazz"><label for="jazz">Jazz</label></li>
+            <li><input type="checkbox" value="hipHop" id="hipHop" name="hipHop"><label for="hipHop">Hip hop</label></li>
+          </ul>
         </div>
-        <div>
-          <label for="blues">Blues</label>
-          <input type="checkbox" value="blues" id="blues" name="blues">
-          <label for="hipHop">Hip hop</label>
-          <input type="checkbox" value="hipHop" id="hipHop" name="hipHop">
-        </div>
-        <div>
+      </div>
+        <div class="buttonWrap">
           <button type="submit">Filter</button>
         </div>
     </fieldset>
     </form>
-    <section class="songInfo">
+    <section class="musicInfo">
       <ul>
-        <h2>Song Name</h2>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
+        <h2>Through the Fire and the Flames</h2>
+        <li>Dragonforce</li>
+        <li>Inhuman Rampage</li>
+        <li>Metal</li>
       </ul>
       <ul>
-        <h2>Song Name</h2>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
+        <h2>Bus Stop Boxer</h2>
+        <li>The Eels</li>
+        <li>Souljacker</li>
+        <li>Rock</li>
       </ul>
       <ul>
-        <h2>Song Name</h2>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
+        <h2>Take on Me</h2>
+        <li>Ninja Sex Party</li>
+        <li>Under the Covers</li>
+        <li>Rock</li>
       </ul>
       <ul>
-        <h2>Song Name</h2>
-        <li>Artist Name</li>
-        <li>Album Name</li>
-        <li>Genre</li>
+        <h2>Regretroid</h2>
+        <li>Starbomb</li>
+        <li>Player Select</li>
+        <li>Rap</li>
       </ul>
     </section>
   </div>

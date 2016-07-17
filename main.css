@@ -1,16 +1,23 @@
+body {
+  width: 80%;
+  margin: auto;
+}
+
 .topNav {
   border: 3px solid black;
   margin-bottom: 10px;
   background-color: #FFB4B0;
+  padding: 20px;
 }
 
 .topNav li {
   text-decoration: none;
   display: inline-block;
-  padding: 20px 10px;
+  padding: 0px 10px;
+  border-right: 2px solid black;
 }
 
-form {
+.musicSelector {
   border: 3px solid black;
   margin: auto;
   width: 30%;
@@ -19,11 +26,34 @@ form {
   float: left;
 }
 
+ul.genreCheck {
+  padding-left: 0;
+}
+.genreCheck li {
+  list-style: none;
+}
+
+#leftBox, #rightBox {
+  display: inline-block;
+  width: 49%
+  padding: 0;
+}
+
 fieldset {
   border: none;
 }
 
-.songInfo {
+button {
+  margin: 10px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+.buttonWrap {
+  text-align: center;
+}
+
+.musicInfo {
   float: right;
   border: 3px solid black;
   margin: auto;
@@ -32,10 +62,11 @@ fieldset {
   background-color: #FEFAC0;
 }
 
-.songInfo li {
+.musicInfo li {
   text-decoration: none;
   display: inline-block;
   padding: 0 10px;
+  border-right: 2px solid black;
 }
 
 h2 {
