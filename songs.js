@@ -19,11 +19,15 @@ for (i = 0; i < removeCharArray.length; i++) {
     songBox.innerHTML += `<p> ${finalSongArray[i]}</p>`
 };
 
-var userSong = document.getElementById("userSong").value
-var userArtist = document.getElementById("userArtist").value
-var userAlbum = document.getElementById("userAlbum").value
-var newSong = userSong + " by " + userArtist + " on the album " + userAlbum;
-
 document.getElementById("addButton").addEventListener("click", function(evt){
+  var userSong = document.getElementById("userSong").value
+  var userArtist = document.getElementById("userArtist").value
+  var userAlbum = document.getElementById("userAlbum").value
+  var newSong = userSong + " -by " + userArtist + " on the album " + userAlbum
   finalSongArray.push(newSong)
+    songBox.innerHTML += `<p>${newSong}</p>`
+    document.getElementById("userSong").value = "";
+    document.getElementById("userArtist").value = "";
+    document.getElementById("userAlbum").value = "";
+
 })
