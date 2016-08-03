@@ -62,13 +62,35 @@ button {
   background-color: #FEFAC0;
 }
 
-.songBox li {
-  text-decoration: none;
-  display: inline-block;
-  padding: 0 10px;
-  border-right: 2px solid black;
-}
-
 h2 {
   color: #785616;
+}
+
+/*Music History 3 CSS*/
+
+/*ul > li {
+  display: inline;
+  list-style-type: none;
+  margin: 5px 15px 0 15px;
+  background-color: goldenrod;
+  padding: 5px;
+}*/
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+/*body {
+  font-size: 2em;
+}*/
+
+.addBox {
+  background-color: tomato;
+  margin: auto;
+  width: 30%;
+  text-align: center;
 }

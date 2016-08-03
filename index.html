@@ -10,10 +10,10 @@
 <body>
   <div>
     <ul class="topNav">
-      <li><a href="#">View Music</a></li>
-      <li><a href="#">Add Music</a></li>
-      <li><a href="#">Profile</a></li>
+      <li><a href="#" id="link-home">Home</a></li>
+      <li><a href="#" id="link-add">Add Music</a></li>
     </ul>
+  <div id="home-view">
     <form class="musicSelector">
       <label class="hidden" for="songLength">Song Length</label>
         <div>
@@ -99,6 +99,21 @@
       </ul> -->
     </section>
   </div>
+  </div>
+  <div class="addBox hidden" id="add-view">
+    <label>Song Name</label>
+    <input type="text" name="songName">
+    <br>
+    <label>Artist</label>
+    <input type="text" name="artist">
+    <br>
+    <label>Album</label>
+    <input type="text" name="album">
+    <br>
+    <button type="submit">Add</button>
+  </div>
 <script src="songs.js"></script>
+<script src="home.js"></script>
+<script src="add.js"></script>
 </body>
 </html>
