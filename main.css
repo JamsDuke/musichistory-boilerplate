@@ -53,7 +53,7 @@ button {
   text-align: center;
 }
 
-#songBox {
+.songBox {
   float: right;
   border: 3px solid black;
   margin: auto;
@@ -89,7 +89,6 @@ h2 {
 }*/
 
 .addBox {
-  background-color: tomato;
   margin: auto;
   width: 30%;
   text-align: center;
