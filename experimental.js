@@ -1,5 +1,23 @@
+var Music = (function songModule(music = {}) {
+  songs = [];
+
+  music.getSavedSongs = function getSongs(callback) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', 'songs.json');
+    xhr.addEventListener('load', function onLoad() {
+      songs = JSON.parse(xhr.responseText);
+      console.info('Success: Loaded songs from songs.json.');
+      callback(songs);
+    });
+    xhr.send();
+  }
+
+  return music;
+})(Music);
+
+
 var Music = (function controlsModule(music = {}) {
-  // Load the saved messages from the JSON file
+  // Load the saved songs from the JSON file
   var songs;
 
   music.getSavedSongs(load);
@@ -7,7 +25,7 @@ var Music = (function controlsModule(music = {}) {
   function load(sng) {
     songs = sng.songs;
 
-    // Load the saved messages into the DOM
+    // Load the saved songs into the DOM
     for (var i = 0; i < songs.length; i++) {
       music.addSongToDom(i, songs[i]);
     }
@@ -18,6 +36,8 @@ var Music = (function controlsModule(music = {}) {
   music.addSong = function addSong(song) {
     // Add message to private array
     songs.push(song);
+    var newIndex = songs.length;
+    music.addSongToDom(newIndex, song)
   };
 
   music.addSongToDom = function addSongToDom(id, song) {
@@ -27,8 +47,8 @@ var Music = (function controlsModule(music = {}) {
 
     // Message elements must have an ID; the first index should be 0.
     var elementContent = `
-      <p style="display:inline">${message.message}</p>
-      <button type="button" onclick="Music.removeSong('${id}')" class="btn btn-danger">
+      <p style="display:inline">${song.name}, ${song.artist}, ${song.album}</p>
+      <button type="button" onclick="Music.removeSong('${id}')" class="btn btn-danger">X
       </button>
       <hr>
     `;
@@ -50,7 +70,23 @@ var Music = (function controlsModule(music = {}) {
     return songs.length - 1;
   };
 
-  music.deleteSongs = function removeSongs() {
+  document.getElementById("addButton").addEventListener("click", function(evt){
+    var userSong = document.getElementById("userSong");
+    var userArtist = document.getElementById("userArtist");
+    var userAlbum = document.getElementById("userAlbum");
+    var newSong = {
+        "name": userSong.value,
+        "artist": userArtist.value,
+        "album": userAlbum.value
+      }
+      music.addSong(newSong)
+      userSong.value = "";
+      userArtist.value = "";
+      userAlbum.value = "";
+        console.log('this works', newSong)
+
+  })
+  music.deleteSongs = function() {
     songs = [];
   };
 
